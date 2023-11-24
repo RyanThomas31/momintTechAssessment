@@ -21,6 +21,24 @@ router.put('/subject/:id', updateSubject);
  
 // Delete subject
 router.delete('/subject/:id', deleteSubject);
+
+// import function from controller
+import { showStudents, showStudentById, createStudent, updateStudent, deleteStudent } from "../controllers/students.js";
+ 
+// Get All Students
+router.get('/students', showStudents);
+ 
+// Get Single Student
+router.get('/student/:id', showStudentById);
+ 
+// Create New Student
+router.post('/student', createStudent);
+ 
+// Update Student
+router.put('/student/:id', updateStudent);
+ 
+// Delete Student
+router.delete('/student/:id', deleteStudent);
  
 // export default router
 export default router;
